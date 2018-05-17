@@ -58,12 +58,25 @@ function updateCartPreview() {
   var trEl = document.createElement('tr'); //creates a table row
   for (var i in chosenItems) {
  
-    trEl.textContent = chosenItems[i];
+    trEl.textContent = chosenItems[i];//old
+
+
+
+
+    var tdEl = document.createElement('td'); //new
+    tdEl.textContent = cartItems[i].quantity;
+    trEl.appendChild(tdEl);
   }
   // trEl.textContent = chosenItems[0];
   tbEL.append(trEl);
   divEl.append(tbEL);
      
+
+
+
+
+
+
 
   // update/
  // TODO: Add a new element to the cartContents div with that information
