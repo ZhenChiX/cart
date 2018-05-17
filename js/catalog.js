@@ -65,7 +65,7 @@ function updateCartPreview() {
   divEl.append(tbEL);
      
 
-  
+  // update/
  // TODO: Add a new element to the cartContents div with that information
 };
 // Set up the "submit" event listener on the form.
