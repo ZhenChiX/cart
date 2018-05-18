@@ -12,7 +12,7 @@ body {
     margin: 0px auto;
     background-repeat: no-repeat;
     background-size: 100%;
-    /* background-image: url("https://media.giphy.com/media/ZFRnvBBxFW8De/giphy.gif"); */
+    background-image: url("https://media.giphy.com/media/ZFRnvBBxFW8De/giphy.gif");
 }
 
 #title {
@@ -102,27 +102,25 @@ footer {
 /* //table// */
 
 table {
-    display: block;
+    /* display: block; */
     /* grid-template-columns: 1fr 1fr; */
-    border: 3px solid black;
+    border: 2px solid black;
     font-family: 'Bangers', sans-serif;
-    text-align: left;
     width: 25%;
-}
-
-td {
-    padding: 5px;
-    border-radius: 10px;
-    /* border: 1px solid black; */
-    background: white;
-    /* text-align: center;
-    margin:0px auto; */
+    font-weight: bold;
 }
 
 tr {
+    text-align: left;
     /* display: block; */
-    background-color: gray;
+    background-color: wheat;
     color: black;
+}
+
+td {
+    text-align: right;
+    padding: 5px;
+    margin: 0px auto;
 }
 
 /* more update */
