@@ -57,12 +57,16 @@ function addSelectedItemToCart() {
 // TODO: Save the contents of the cart to Local Storage
 var localObject =[];
 function saveCartToLocalStorage() {
+
+  localStorage.setItem('cart', JSON.stringify(cartItems));
+
   for (var i in cartItems){
 
     localStorage.setItem('cartItemsKey', JSON.stringify(cartItems[i]));
 
   }
 //only saving one object
+
 
 
 }
@@ -97,7 +101,7 @@ function updateCartPreview() {
   // trEl.textContent = chosenItems[0];
   tbEL.append(trEl);
   divEl.append(tbEL);
-  
+
   // update/
  // TODO: Add a new element to the cartContents div with that information
 };

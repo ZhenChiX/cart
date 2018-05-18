@@ -12,7 +12,7 @@ body {
     margin: 0px auto;
     background-repeat: no-repeat;
     background-size: 100%;
-    background-image: url("https://media.giphy.com/media/ZFRnvBBxFW8De/giphy.gif");
+    /* background-image: url("https://media.giphy.com/media/ZFRnvBBxFW8De/giphy.gif"); */
 }
 
 #title {
@@ -21,7 +21,8 @@ body {
     margin: 20px auto;
     text-align: center;
 }
-.card{
+
+.card {
     display: block;
     margin: 0px auto;
 }
@@ -76,6 +77,11 @@ section h1 {
     font-size: 2vw;
 }
 
+header h1 {
+    font-family: 'Frijole', cursive;
+    font-size: 2vw;
+}
+
 .copy {
     display: inline-block;
     border: 2px solid black;
@@ -84,7 +90,6 @@ section h1 {
     color: wheat;
     width: 60vw;
     border-radius: 10px;
-    
 }
 
 footer {
@@ -92,5 +97,30 @@ footer {
     margin: 0px auto;
 }
 
-
 /* //modify// */
+
+/* //table// */
+
+table {
+    display: block;
+    /* grid-template-columns: 1fr 1fr; */
+    border: 3px solid black;
+    font-family: 'Bangers', sans-serif;
+    text-align: left;
+    width: 25%;
+}
+
+td {
+    padding: 5px;
+    border-radius: 10px;
+    /* border: 1px solid black; */
+    background: white;
+    /* text-align: center;
+    margin:0px auto; */
+}
+
+tr {
+    /* display: block; */
+    background-color: gray;
+    color: black;
+}
