@@ -10,7 +10,7 @@ function populateForm() {
     optionEl.textContent = Product.allProducts[i].name;
     selectElement.appendChild(optionEl);
   }
-}
+};
 // When someone submits the form, we need to add the selected item to the cart
 // object, save the whole thing back to local storage and update the screen
 // so that it shows the # of items in the cart and a quick preview of the cart itself.
@@ -22,9 +22,15 @@ function handleSubmit(event) {
   saveCartToLocalStorage();
   updateCounter();
   updateCartPreview();
-}
+};
+
+
+
+
+
 var chosenItems = [];
 var cartItems = [];
+
 // TODO: Add the selected item and quantity to the cart
 function addSelectedItemToCart() {
   // TODO: suss out the item picked from the select list
@@ -39,17 +45,38 @@ function addSelectedItemToCart() {
     this.quantity = quantity;
     cartItems.push(this);
   };
+
   new NewCartItem(selectItem, updateQuantity);
   // var updatequantity = document.getElementById('quantity');
-}
+};
+
+
+
+
+
 // TODO: Save the contents of the cart to Local Storage
+var localObject =[];
 function saveCartToLocalStorage() {
+  for (var i in cartItems){
+
+    localStorage.setItem('cartItemsKey', JSON.stringify(cartItems[i]));
+
+  }
+//only saving one object
+
+
 }
 // TODO: Update the cart count in the header nav with the number of items in the Cart
 function updateCounter() {
   document.getElementById('itemCount').textContent = ': ' + chosenItems.length;
 };
+
+
 // TODO: As you add items into the cart, show them (item & quantity) in the cart preview div
+
+
+
+
 function updateCartPreview() {
   // TODO: Get the item and quantity from the form
   var divEl = document.getElementById('cartContents');
@@ -58,16 +85,24 @@ function updateCartPreview() {
   var trEl = document.createElement('tr'); //creates a table row
   for (var i in chosenItems) {
  
-    trEl.textContent = chosenItems[i];
+    trEl.textContent = chosenItems[i];//old
+
+
+
+
+    var tdEl = document.createElement('td'); //new
+    tdEl.textContent = cartItems[i].quantity;
+    trEl.appendChild(tdEl);
   }
   // trEl.textContent = chosenItems[0];
   tbEL.append(trEl);
   divEl.append(tbEL);
-     
-
+  
   // update/
  // TODO: Add a new element to the cartContents div with that information
 };
+
+
 // Set up the "submit" event listener on the form.
 // This is the trigger for the app. When a user "submits" the form, it will
 // Call that handleSubmit method above and kick off the whole process
