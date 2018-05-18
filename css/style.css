@@ -1,4 +1,93 @@
 /* TODO: Make it awesome */
 
-
 /* /update// */
+
+/* font-family: 'Faster One', cursive;
+font-family: 'Vast Shadow', cursive;
+font-family: 'Frijole', cursive; */
+
+body {
+    display: grid;
+    width: 960px;
+    margin: 0px auto;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-image: url("https://media.giphy.com/media/ZFRnvBBxFW8De/giphy.gif");
+}
+
+#title {
+    font-family: 'Faster One', cursive;
+    font-size: 6vw;
+    margin: 20px auto;
+    text-align: center;
+}
+.card{
+    display: block;
+    margin: 0px auto;
+}
+
+ul {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 6em;
+    text-align: center;
+}
+
+ul li {
+    /* display: inline-block; */
+    font-weight: bold;
+    background-color: cadetblue;
+    padding: 1em;
+    border: solid gray;
+    color: black;
+    transition: 600ms;
+    -moz-transform: scale(1) translate(9px, -18px) skew(-40deg, 0deg);
+    -webkit-transform: scale(1) translate(9px, -18px) skew(-40deg, 0deg);
+    -o-transform: scale(1) translate(9px, -18px) skew(-40deg, 0deg);
+    -ms-transform: scale(1) translate(9px, -18px) skew(-40deg, 0deg);
+    transform: scale(1) translate(9px, -18px) skew(-40deg, 0deg);
+}
+
+ul li:hover {
+    background-color: lightgreen;
+    color: white;
+    border: solid white;
+    -moz-transform: scale(1.4) translate(9px, -18px) skew(-40deg, 0deg);
+    -webkit-transform: scale(1.4) translate(9px, -18px) skew(-40deg, 0deg);
+    -o-transform: scale(1.4) translate(9px, -18px) skew(-40deg, 0deg);
+    -ms-transform: scale(1.4) translate(9px, -18px) skew(-40deg, 0deg);
+    transform: scale(1.4) translate(9px, -18px) skew(-40deg, 0deg);
+    /* transform: scale(1.2); */
+}
+
+ul li a {
+    text-decoration: none;
+    /* text-decoration-color: white; */
+    color: white;
+}
+
+p {
+    font-family: 'Frijole', cursive;
+    font-size: 2vw;
+}
+
+section h1 {
+    font-family: 'Frijole', cursive;
+    font-size: 2vw;
+}
+
+.copy {
+    display: inline-block;
+    border: 2px solid black;
+    font-family: 'Vast Shadow', cursive;
+    background-color: gray;
+    color: wheat;
+    width: 60vw;
+    border-radius: 10px;
+    
+}
+
+footer {
+    display: block;
+    margin: 0px auto;
+}

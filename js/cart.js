@@ -29,6 +29,7 @@ function showCart() {
   // TODO: Iterate over the items in the cart
 
 
+
   var teEl = document.getElementById('cart');  //
  // var trEl = document.createElement('tr'); //creates a table row
   
@@ -56,6 +57,24 @@ xArray.push(i);
     teEl.appendChild(trEl);
   
   };
+ var divEl = document.getElementById('cartContents');
+  var tbEL = document.createElement('table');
+  
+  var trEl = document.createElement('tr'); //creates a table row
+  for (var i in chosenItems) {
+ 
+    trEl.textContent = chosenItems[i];//old
+
+    var tdEl = document.createElement('td'); //new
+    tdEl.textContent = cartItems[i].quantity;
+    trEl.appendChild(tdEl);
+  }
+  // trEl.textContent = chosenItems[0];
+  tbEL.append(trEl);
+  divEl.append(tbEL);
+
+
+
   // TODO: Create a TR
   // TODO: Create a TD for the delete link, quantity,  and the item
   // TODO: Add the TR to the TBODY and each of the TD's to the TR
